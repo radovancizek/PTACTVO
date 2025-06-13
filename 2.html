@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -6,32 +5,48 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Ptáček číslo 2</title>
  <style>
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  html, body {
     margin: 0;
-    background-color: #f0f0f0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000; /* pro lepší kontrast */
   }
+
+  .container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
   img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     max-width: 100%;
-    height: auto;
+    max-height: 100%;
+    transform: translate(-50%, -50%);
   }
+
   button {
-    margin-top: 20px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
     padding: 10px 20px;
     font-size: 16px;
   }
  </style>
 </head>
 <body>
- <button onclick="document.getElementById('zpev').play()">▶️ Přehrát zpěv ptáčka</button>
- <img src="2.png" alt="Ptáci">
-  <audio id="zpev" loop>
-   <source src="2.mp3" type="audio/mpeg">
-   Váš prohlížeč nepodporuje přehrávání zvuku.
- </audio>
+ <div class="container">
+   <button onclick="document.getElementById('zpev').play()">▶️ Přehrát zpěv ptáčka</button>
+   <img src="2.png" alt="Ptáci">
+   <audio id="zpev" loop>
+     <source src="2.mp3" type="audio/mpeg">
+     Váš prohlížeč nepodporuje přehrávání zvuku.
+   </audio>
+ </div>
 </body>
 </html>
