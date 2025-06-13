@@ -1,30 +1,38 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pták číslo 2</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Ptáček číslo 2</title>
+ <style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+ </style>
 </head>
 <body>
-    <img src="2.png" alt="Ptáci">
-    <audio autoplay loop>
-        <source src="2.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+ Ptáček 
+ <button onclick="document.getElementById('zpev').play()">▶️ Přehrát zpěv ptáčka</button>
+ <img src="2.png" alt="Ptáci">
+  <audio id="zpev" loop>
+   <source src="2.mp3" type="audio/mpeg">
+   Váš prohlížeč nepodporuje přehrávání zvuku.
+ </audio>
 </body>
 </html>
